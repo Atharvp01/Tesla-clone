@@ -2,13 +2,13 @@ import React from "react";
 import Header from "./Header";
 import styled from "styled-components";
 
-function Section() {
+function Section(props) {
   return (
-    <Wrap>
+    <Wrap bgImage={props.Img}>
       <Title>
-        <h1>Model 3</h1>
+        <h1>{props.title}</h1>
         <p style={{ fontWeight: 410, paddingTop: "10px" }}>
-          Leasing starting at $349/mo
+          {props.description}
         </p>
       </Title>
       <div
@@ -19,13 +19,17 @@ function Section() {
         }}
       >
         <ButtonGroup>
-          <LeftButton>Custom Order</LeftButton>
-          <RightButton>Demo Drive</RightButton>
+          <LeftButton>{props.leftButtonText}</LeftButton>
+          {props.rightButtonText && (
+            <RightButton>{props.rightButtonText}</RightButton>
+          )}
         </ButtonGroup>
-        <DownArrow
-          src="/images/down-arrow.svg"
-          alt="down-arrow-image"
-        ></DownArrow>
+        {props.downArrow && (
+          <DownArrow
+            src="/images/down-arrow.svg"
+            alt="down-arrow-image"
+          ></DownArrow>
+        )}
       </div>
     </Wrap>
   );
@@ -34,7 +38,7 @@ function Section() {
 const Wrap = styled.div`
   width: 100%;
   height: 100vh;
-  background: url("/images/model-3.jpg");
+  background: url(${(props) => props.bgImage});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -71,10 +75,14 @@ const LeftButton = styled.button`
   color: #ffffff;
   background-color: rgba(23, 26, 32, 0.8);
   margin: 10px 20px 10px 20px;
-  padding: 16px 100px;
+  padding: 16px 110px;
   opacity: 0.85;
   font-size: 14px;
   cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    transform: scale(1.025);
+  }
   @media only screen and (min-width: 600px) {
     padding: 13px 90px;
     margin: 10px 10px 30px 20px;
