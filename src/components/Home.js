@@ -1,5 +1,6 @@
 import React from "react";
 import Section from "./Section";
+import Header from "./Header";
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
         description=""
         leftButtonText="Custom Order"
         rightButtonText="Demo Drive"
+        id="section2"
       />
 
       <Section
@@ -35,12 +37,21 @@ function Home() {
         description="Schedule a Demo Drive"
         leftButtonText="Custom Order"
         rightButtonText="View Inventory"
+        id=""
       />
 
       <Section
         title="Solar Panels"
         Img="/images/solar-panel.jpg"
         description="Lowest Cost Solar Panels in America"
+        leftButtonText="Order Now"
+        rightButtonText="Learn More"
+      />
+
+      <Section
+        title="Solar Roof"
+        Img="/images/solar-roof.jpg"
+        description="Produce Clean Energy From Your Roof"
         leftButtonText="Order Now"
         rightButtonText="Learn More"
       />
