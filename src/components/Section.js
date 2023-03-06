@@ -1,36 +1,41 @@
 import React from "react";
 import Header from "./Header";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 function Section(props) {
   return (
     <Wrap bgImage={props.Img}>
-      <Title>
-        <h1>{props.title}</h1>
-        <p style={{ fontWeight: 410, paddingTop: "10px" }}>
-          {props.description}
-        </p>
-      </Title>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <ButtonGroup>
-          <LeftButton>{props.leftButtonText}</LeftButton>
-          {props.rightButtonText && (
-            <RightButton>{props.rightButtonText}</RightButton>
+        <Title>
+      <Fade bottom cascade>
+          <h1>{props.title}</h1>
+          <p style={{ fontWeight: 410, paddingTop: "10px" }}>
+            {props.description}
+          </p>
+      </Fade>
+        </Title>
+      <Fade bottom>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <ButtonGroup>
+            <LeftButton>{props.leftButtonText}</LeftButton>
+            {props.rightButtonText && (
+              <RightButton>{props.rightButtonText}</RightButton>
+            )}
+          </ButtonGroup>
+          {props.downArrow && (
+            <DownArrow
+              src="/images/down-arrow.svg"
+              alt="down-arrow-image"
+            ></DownArrow>
           )}
-        </ButtonGroup>
-        {props.downArrow && (
-          <DownArrow
-            src="/images/down-arrow.svg"
-            alt="down-arrow-image"
-          ></DownArrow>
-        )}
-      </div>
+        </div>
+      </Fade>
     </Wrap>
   );
 }

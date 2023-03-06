@@ -10,35 +10,17 @@ function Header() {
         style={{ background: "none" }}
       />
       <NavMenu>
-        <span>
-          <a href="#">Model 3</a>
-        </span>
-        <span>
-          <a href="#section1">Model Y</a>
-        </span>
-        <span>
-          <a href="#">Model S</a>
-        </span>
-        <span>
-          <a href="#">Model X</a>
-        </span>
-        <span>
-          <a href="#">Solar Roof</a>
-        </span>
-        <span>
-          <a href="#">Solar Panel</a>
-        </span>
+        <a href="#">Model 3</a>
+        <a href="#">Model Y</a>
+        <a href="#">Model S</a>
+        <a href="#">Model X</a>
+        <a href="#">Solar Roof</a>
+        <a href="#">Solar Panel</a>
       </NavMenu>
       <NavMenuRight>
-        <span>
-          <a href="#">Shop</a>
-        </span>
-        <span>
-          <a href="#">Account</a>
-        </span>
-        <span>
-          <a href="#">Menu</a>
-        </span>
+        <a href="#">Shop</a>
+        <a href="#">Account</a>
+        <a href="#">Menu</a>
       </NavMenuRight>
     </NavContainer>
   );
@@ -67,9 +49,21 @@ const NavMenu = styled.div`
     padding-right: 35px;
     color: black;
     text-decoration: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  @media only screen and (max-width: 1120px) {
+    display: none;
   }
 `;
 
-const NavMenuRight = styled(NavMenu)``;
+const NavMenuRight = styled(NavMenu)`
+  @media only screen and (max-width: 1120px) {
+    ${
+      "" /* display: flex;
+    align-items: center; */
+    }
+  }
+`;
 
 export default Header;
