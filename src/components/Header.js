@@ -4,11 +4,7 @@ import styled from "styled-components";
 function Header() {
   return (
     <NavContainer>
-      <Img
-        src="/images/logo.svg"
-        alt="tesla-logo"
-        style={{ background: "none" }}
-      />
+      <Img src="/images/logo.svg" alt="tesla-logo" />
       <NavMenu>
         <a href="#">Model 3</a>
         <a href="#">Model Y</a>
@@ -40,6 +36,7 @@ const NavContainer = styled.div`
 const Img = styled.img`
   width: 110px;
   margin: 10px 0 0 30px;
+  cursor: pointer;
 `;
 
 const NavMenu = styled.div`

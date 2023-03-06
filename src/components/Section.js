@@ -1,20 +1,19 @@
 import React from "react";
-import Header from "./Header";
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 function Section(props) {
   return (
     <Wrap bgImage={props.Img}>
-        <Title>
-      <Fade bottom cascade>
+      <Title>
+        <Fade cascade="true" direction="down" triggerOnce="true">
           <h1>{props.title}</h1>
           <p style={{ fontWeight: 410, paddingTop: "10px" }}>
             {props.description}
           </p>
-      </Fade>
-        </Title>
-      <Fade bottom>
+        </Fade>
+      </Title>
+      <Fade cascade="true" direction="down" triggerOnce="true">
         <div
           style={{
             display: "flex",
