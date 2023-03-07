@@ -1,9 +1,8 @@
 import React from "react";
 import Section from "./Section";
-import Header from "./Header";
-import styled from "styled-components";
 
 function Home() {
+  document.title = "Electric Cars, Solar and Clean Energy | Tesla";
   return (
     <div>
       <Section
