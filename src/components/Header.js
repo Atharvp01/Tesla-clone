@@ -14,7 +14,9 @@ function Header() {
     <NavContainer>
       <Img src="/images/logo.svg" alt="tesla-logo" />
       <NavMenu>
-        <Link to="/models">Model S</Link>
+        <Link to="/models" style={{ color: "black" }}>
+          Model S
+        </Link>
         <Link to="/model3">Model 3</Link>
         <Link to="/modelx">Model X</Link>
         <Link to="/modely">Model Y</Link>
@@ -32,10 +34,18 @@ function Header() {
       <Sidenav visible={isVisible}>
         <Fade direction="right" triggerOnce="true">
           <ul>
-            <li>Model S</li>
-            <li>Model 3</li>
-            <li>Model X</li>
-            <li>Model Y</li>
+            <li>
+              <Link to="/models">Model S</Link>
+            </li>
+            <li>
+              <Link to="/model3">Model 3</Link>
+            </li>
+            <li>
+              <Link to="/modelx">Model X</Link>
+            </li>
+            <li>
+              <Link to="/modely">Model Y</Link>
+            </li>
             <li>Solar Roof</li>
             <li>Solar Panels</li>
             <li>Existing Inventory</li>
@@ -123,6 +133,7 @@ const MobileMenu = styled.div`
 
 const Sidenav = styled.div`
   display: ${(props) => (props.visible ? "block" : "none")};
+  overflow: hidden;
   background-color: #f9f9f9;
   position: absolute;
   top: 0;
