@@ -90,7 +90,7 @@ const LeftDiv = styled.div`
   }
 
   @media only screen and (max-width: 1120px) {
-    height: 90vh;
+    height: 100%;
     img {
       margin: 2rem auto;
     }
@@ -116,7 +116,7 @@ const RightDiv = styled(LeftDiv)`
   }
 
   @media only screen and (max-width: 1120px) {
-    margin-top: -2rem;
+    height: 100%;
   }
 `;
 
