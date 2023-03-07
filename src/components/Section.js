@@ -150,6 +150,7 @@ const Specifications = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    white-space: nowrap;
   }
   button {
     background-color: transparent;
