@@ -3,6 +3,7 @@ import Interior from "./Interior";
 import Section from "./Section";
 
 function Model3() {
+  document.title = "Model 3 | Tesla";
   return (
     <div>
       <Section
