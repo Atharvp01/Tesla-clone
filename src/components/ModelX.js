@@ -1,4 +1,5 @@
 import React from "react";
+import Interior from "./Interior";
 import Section from "./Section";
 
 function ModelX() {
@@ -18,6 +19,7 @@ function ModelX() {
         peakPower="1,020 hp"
         peakPowerText="Peak Power"
       />
+      <Interior />
     </div>
   );
 }

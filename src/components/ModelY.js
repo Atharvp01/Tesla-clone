@@ -1,4 +1,5 @@
 import React from "react";
+import Interior from "./Interior";
 import Section from "./Section";
 
 function ModelY() {
@@ -16,6 +17,7 @@ function ModelY() {
         topSpeed="155 mph"
         topSpeedText="Top Speed"
       />
+      <Interior />
     </div>
   );
 }

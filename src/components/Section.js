@@ -31,7 +31,7 @@ function Section(props) {
           )}
 
           {!props.leftButtonText && !props.rightButtonText && (
-            <Fade delay={500} direction="down">
+            <Fade delay={500} direction="down" triggerOnce>
               <Specifications>
                 <div>
                   <h2>{props.range}</h2>
@@ -70,6 +70,7 @@ function Section(props) {
 
 const Wrap = styled.div`
   width: 100%;
+  overflow-x: hidden;
   height: 100vh;
   background: url(${(props) => props.bgImage});
   background-position: center;

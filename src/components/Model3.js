@@ -1,6 +1,6 @@
 import React from "react";
+import Interior from "./Interior";
 import Section from "./Section";
-import { Fade } from "react-awesome-reveal";
 
 function Model3() {
   return (
@@ -17,6 +17,7 @@ function Model3() {
         topSpeed="162 mph"
         topSpeedText="Top Speed"
       />
+      <Interior />
     </div>
   );
 }

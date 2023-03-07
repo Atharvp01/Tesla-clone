@@ -12,7 +12,9 @@ function Header() {
   };
   return (
     <NavContainer>
-      <Img src="/images/logo.svg" alt="tesla-logo" />
+      <Link to="/">
+        <Img src="/images/logo.svg" alt="tesla-logo" />
+      </Link>
       <NavMenu>
         <Link to="/models">Model S</Link>
         <Link to="/model3">Model 3</Link>
