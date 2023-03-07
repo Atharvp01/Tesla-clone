@@ -14,9 +14,7 @@ function Header() {
     <NavContainer>
       <Img src="/images/logo.svg" alt="tesla-logo" />
       <NavMenu>
-        <Link to="/models" style={{ color: "black" }}>
-          Model S
-        </Link>
+        <Link to="/models">Model S</Link>
         <Link to="/model3">Model 3</Link>
         <Link to="/modelx">Model X</Link>
         <Link to="/modely">Model Y</Link>
@@ -35,16 +33,24 @@ function Header() {
         <Fade direction="right" triggerOnce="true">
           <ul>
             <li>
-              <Link to="/models">Model S</Link>
+              <Link to="/models" onClick={toggleComponent}>
+                Model S
+              </Link>
             </li>
             <li>
-              <Link to="/model3">Model 3</Link>
+              <Link to="/model3" onClick={toggleComponent}>
+                Model 3
+              </Link>
             </li>
             <li>
-              <Link to="/modelx">Model X</Link>
+              <Link to="/modelx" onClick={toggleComponent}>
+                Model X
+              </Link>
             </li>
             <li>
-              <Link to="/modely">Model Y</Link>
+              <Link to="/modely" onClick={toggleComponent}>
+                Model Y
+              </Link>
             </li>
             <li>Solar Roof</li>
             <li>Solar Panels</li>
