@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,10 +14,10 @@ function Header() {
     <NavContainer>
       <Img src="/images/logo.svg" alt="tesla-logo" />
       <NavMenu>
-        <a href="#">Model 3</a>
-        <a href="#">Model Y</a>
-        <a href="#">Model S</a>
-        <a href="#">Model X</a>
+        <Link to="/models">Model S</Link>
+        <Link to="/model3">Model 3</Link>
+        <Link to="/modelx">Model X</Link>
+        <Link to="/modely">Model Y</Link>
         <a href="#">Solar Roof</a>
         <a href="#">Solar Panel</a>
       </NavMenu>

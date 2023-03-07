@@ -21,12 +21,41 @@ function Section(props) {
             alignItems: "center",
           }}
         >
-          <ButtonGroup>
-            <LeftButton>{props.leftButtonText}</LeftButton>
-            {props.rightButtonText && (
-              <RightButton>{props.rightButtonText}</RightButton>
-            )}
-          </ButtonGroup>
+          {props.leftButtonText && (
+            <ButtonGroup>
+              <LeftButton>{props.leftButtonText}</LeftButton>
+              {props.rightButtonText && (
+                <RightButton>{props.rightButtonText}</RightButton>
+              )}
+            </ButtonGroup>
+          )}
+
+          {!props.leftButtonText && !props.rightButtonText && (
+            <Fade delay={500} direction="down">
+              <Specifications>
+                <div>
+                  <h2>{props.range}</h2>
+                  <span>{props.rangeText}</span>
+                </div>
+                <div>
+                  <h2>{props.acceleration}</h2>
+                  <span>{props.accelerationText}</span>
+                </div>
+                <div>
+                  <h2>{props.topSpeed}</h2>
+                  <span>{props.topSpeedText}</span>
+                </div>
+                {props.peakPower && (
+                  <div id="div1">
+                    <h2>{props.peakPower}</h2>
+                    <span>{props.peakPowerText}</span>
+                  </div>
+                )}
+                <button id="div2">Order Now</button>
+              </Specifications>
+            </Fade>
+          )}
+
           {props.downArrow && (
             <DownArrow
               src="/images/down-arrow.svg"
@@ -103,6 +132,42 @@ const DownArrow = styled.img`
   cursor: pointer;
   margin-bottom: 5px;
   animation: animateDown infinite 1.5s;
+  @media only screen and (max-width: 1120px) {
+    margin-bottom: 20px;
+  }
+`;
+
+const Specifications = styled.div`
+  color: #f9f9f9;
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  max-height: 50px;
+  margin-bottom: 50px;
+  div {
+    margin: 0px 10px 500px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 30px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 1120px) {
+    & #div1 {
+      display: none;
+    }
+    & #div2 {
+      display: none;
+    }
+    margin-bottom: 100px;
+  }
 `;
 
 export default Section;
